@@ -80,5 +80,78 @@ nav{
     gap: 1rem;
     font-weight: bold;
     color: var(--location);
+    cursor: pointer;
+}
+
+main{
+    width: 100vw;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.weather-container{
+    margin-top: 5.5rem;
+    /* width: 600px; */
+    width: 40%;
+    background-color: var(--primary);
+    border: solid 2px var(--border);
+    border-radius: 20px;
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date{
+    font-size: 1.8rem;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.temp{
+    font-size: 6rem;
+    color: white;
+    margin-top: 2rem
+}
+
+.desc{
+    font-size: 1.8rem;
+    color: white;
+}
+
+.max-min{
+    font-size: 1.8rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.max-min span{
+    font-size: 1.8rem;
+}
+
+
+.flag{
+    background-color: var(--primary);
+    margin-top: 5.5rem;
+    border: solid 2px var(--border);
+    border-radius: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flag p {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-top: 2rem;
+}
+
+.flag img{
+    width: 14rem;
+    height: 10rem;
+    border-radius: 10px;
+    margin-top: 3rem;
 }
 
