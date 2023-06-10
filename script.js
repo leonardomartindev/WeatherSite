@@ -113,8 +113,8 @@ const showData = async () => {
     presure.innerHTML = pressureData;
     visibility.innerHTML = visibilityData;
     wind.innerHTML = windData;
-    sunrise.innerHTML = sunsetTimeData;
-    sunset.innerHTML = sunriseTimeData;
+    sunrise.innerHTML = sunriseTimeData;
+    sunset.innerHTML = sunsetTimeData;
     clouds.innerHTML = cloudsData;
     locationNav.innerHTML = ` <i class="location-nav"><img src="imgs/location-icon.svg" alt="">${nameLocation}</i>`;
     feelsLike.innerHTML = feelsLikeData;
