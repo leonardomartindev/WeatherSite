@@ -28,6 +28,8 @@ const sunrise = document.querySelector(".sunrise-td");
 const sunset = document.querySelector(".sunset-td");
 const clouds = document.querySelector(".cloud-td");
 const feelsLike = document.querySelector(".feels-like");
+const descWeather = document.querySelector(".desc-weather")
+
 
 const meses = [
   'janeiro',
@@ -55,7 +57,7 @@ const dataFormatada = `${dia} de ${meses[mes]}, ${ano}`;
 const getWeatherData = async (value) => {
   showSpinner();
   main.classList.add("hidden");
-  const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&appid=${apiKey}&lang=pt_br`;
+  const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&appid=${apiKey}&lang=pt`;
   try {
     const res = await fetch(apiWeatherURL);
     const data = await res.json();
@@ -117,6 +119,7 @@ const showData = async () => {
     locationNav.innerHTML = ` <i class="location-nav"><img src="imgs/location-icon.svg" alt="">${nameLocation}</i>`;
     feelsLike.innerHTML = feelsLikeData;
     hour.innerHTML = currentTime
+    descWeather.innerHTML = `O clima em ${nameLocation}, hoje`
 
     // Mostrando imagem, bandeira e ícone
     const countryID = String(weatherData.sys.country).toLowerCase();
