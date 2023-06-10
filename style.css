@@ -381,5 +381,35 @@
   
 }
 @media (max-width: 550px) {
-
+  .weather-container{
+    width: 60%;
+  }
+  .flag{
+    width: 60%;
+  }
+  .general-info-container{
+    width: 60%;
+  }
+  .img{
+    width: 60%;
+  }
+}
+@media (max-width: 430px) {
+  .search{
+    width: 80vw;
+  }
+}
+@media (max-width: 380px) {
+  .weather-container{
+    width: 80%;
+  }
+  .flag{
+    width: 80%;
+  }
+  .general-info-container{
+    width: 80%;
+  }
+  .img{
+    width: 80%;
+  }
 }
