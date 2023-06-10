@@ -71,7 +71,7 @@ const getWeatherData = async (value) => {
 
 // Função para mostrar os dados da API no DOM
 const showData = async () => {
-  const value = searchInput.value;
+  value = searchInput.value;
   loadingPage.classList.add("hide");
   if (!value) {
     window.alert("Digite um valor válido no campo de pesquisa");
@@ -79,6 +79,8 @@ const showData = async () => {
   }
   try {
     const weatherData = await getWeatherData(value);
+    searchInput.value = ""
+    
     // Dados da API
     const nameLocation = weatherData.name;
     const feelsLikeData = `${parseInt(weatherData.main.feels_like)}°C`;
