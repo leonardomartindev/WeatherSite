@@ -1,35 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-size: 62.5%;
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
-}
-
-:root{
+  }
+  
+  :root {
     --nav-background: #CAD1C5;
     --primary: #2F3E46;
     --secondary: #B5C5CD;
-    --background: #52796F;
+    --background: #3e5a53;
     --location: #414141;
     --border: #2A3840;
     --border-nav: #60635E;
-}
-
-body{
-    background-color: var(--background);
-}
-
-nav{
+  }
+  
+  body {
+    background: linear-gradient(90deg, hsla(165, 18%, 30%, 1) 0%, hsla(165, 20%, 38%, 1) 50%);
+    overflow-x: hidden;
+  }
+  
+  nav {
     align-items: center;
     background-color: var(--nav-background);
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0;
     border-bottom: var(--border-nav) solid 3px;
-}
-
-.logo{
+  }
+  
+  .logo {
     margin-left: 3rem;
     display: flex;
     align-items: center;
@@ -38,19 +39,19 @@ nav{
     color: #343434;
     text-align: center;
     cursor: pointer;
-}
-
-.logo img{
+  }
+  
+  .logo img {
     margin-right: 1rem;
     width: 7rem;
     height: auto;
-}
-
-.search-container {
+  }
+  
+  .search-container {
     position: relative;
   }
-
-.search{
+  
+  .search {
     outline: none;
     background-color: var(--primary);
     width: 400px;
@@ -60,9 +61,14 @@ nav{
     font-size: 1.8rem;
     padding-left: 1rem;
     height: 35px;
-}
+  }
+
+  .search::placeholder{
+    text-align: center;
+    color: rgb(160, 160, 160);
+  }
   
-.search-icon {
+  .search-icon {
     position: absolute;
     top: 50%;
     right: 1.5rem;
@@ -70,9 +76,9 @@ nav{
     width: 20px;
     height: 20px;
     cursor: pointer;
-}
-
-.location-nav{
+  }
+  
+  .location-nav {
     margin-right: 4rem;
     font-size: 1.4rem;
     display: flex;
@@ -81,69 +87,68 @@ nav{
     font-weight: bold;
     color: var(--location);
     cursor: pointer;
-}
-
-main{
-    width: 100vw;
+  }
+  
+  main {
     display: flex;
+    gap: 2rem;
     flex-direction: column;
-}
-
-.main-container{
-    gap: 3rem;
-
+  }
+  
+  .main-container {
+    gap: 2rem;
     display: flex;
     justify-content: center;
-}
-
-.second-main-container{
+  }
+  
+  .second-main-container {
     display: flex;
+    gap: 2rem;
     justify-content: center;
-}
-
-.weather-container{
-    margin-top: 5.5rem;
-    /* width: 600px; */
+    padding-bottom: 5rem;
+  }
+  
+  .weather-container {
+    margin-top: 3rem;
     width: 40%;
     background-color: var(--primary);
     border: solid 2px var(--border);
     border-radius: 20px;
-    padding: 2rem 2rem 0 2rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
-}
-
-.date{
+  }
+  
+  .date {
     font-size: 1.8rem;
     color: var(--secondary);
     font-weight: 500;
-}
-
-.temp{
+  }
+  
+  .temp {
     font-size: 6rem;
     color: white;
-    margin-top: 2rem
-}
-
-.desc{
+    margin-top: 2rem;
+  }
+  
+  .desc {
     font-size: 1.8rem;
     color: white;
-}
-
-.max-min{
+  }
+  
+  .max-min {
     font-size: 1.8rem;
     color: white;
     margin-top: 1rem;
-}
-
-.max-min span{
+  }
+  
+  .max-min span {
     font-size: 1.8rem;
-}
-
-
-.flag{
+  }
+  
+  .flag {
     background-color: var(--primary);
-    margin-top: 5.5rem;
+    margin-top: 3rem;
     border: solid 2px var(--border);
     border-radius: 20px;
     width: 20%;
@@ -151,46 +156,154 @@ main{
     justify-content: start;
     align-items: center;
     flex-direction: column;
-}
-
-.flag p {
+  }
+  
+  .flag p {
     font-size: 2rem;
     color: var(--secondary);
     margin-top: 2rem;
-}
-
-.flag img{
+  }
+  
+  .flag img {
     width: 14rem;
     height: 10rem;
     border-radius: 10px;
     margin-top: 3rem;
-}
-
-.general-info-container{
+  }
+  
+  .general-info-container {
     background-color: var(--primary);
-    margin-top: 5.5rem;
     border: solid 2px var(--border);
     border-radius: 20px;
     width: 40%;
     color: var(--secondary);
-}
-
-.general-info{
+    /* height: 400px; */
+  }
+  
+  .general-info {
     display: flex;
     flex-direction: column;
     padding: 2rem 2rem 0 2rem;
 
-}
-.desc-weather { 
+    
+  }
+  
+  .desc-weather {
     font-size: 1.8rem;
-}
-.feels-like{
+  }
+  
+  .feels-like {
     font-size: 6rem;
     color: white;
-}
-.feels-like-desc{
+  }
+  
+  .feels-like-desc {
     font-size: 1.5rem;
+  }
+  
+  .tables {
+    display: flex;
+    font-size: 11rem;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .tables table tr td {
+    padding: 1rem;
+  }
+  
+  .tables table tr td:nth-child(2) {
+    text-transform: capitalize;
+    padding-left: 0;
+  }
+  
+  .tables table tr td:nth-child(3) {
+    color: rgb(255, 255, 210);
+    text-align: right;
+    font-weight: 600;
+  }
+  
+  .tables table tr {
+    position: relative;
+  }
+  
+  .tables table tr::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary);
+  }
+  
+  .img {
+    width: 20%;
+    background-color: var(--primary);
+    border: solid 5px var(--border);
+    border-radius: 20px;
+    position: relative;
+    /* height: 420px; */
+  }
+  
+  .unsplash {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: brightness(80%);
+  }
+  
+  .img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hidden{
+    display: none;
+  }
+
+/* .spinner-grow{
+    font-size: 2rem;
+    margin: 10rem;
+} */
+  
+.spinner-container {
+  /* display: none; */
+  height: 75vh;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
+.text-center.spinner-container{
+  display: none;
+}
 
+.spinner-container.active {
+  display: flex; /* Exibe o spinner quando a classe "active" é adicionada */
+}
 
+.loading-page{
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.hide{
+  display: none;
+}

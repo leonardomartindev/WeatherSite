@@ -7,104 +7,129 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Weather site</title>
 </head>
 <body>
     <!-- <img class="icon-weather" alt="">
-    <img class="flag-country">
-    <img class="unsplash" alt=""> -->
-    <nav>
+        <img class="flag-country">
+        <img class="unsplash" alt=""> -->
+        <nav>
         
-        <div class="logo">
-            <img src="imgs/Vector.svg" alt="">
-            <h2>weather</h2>
-        </div>
-        <div class="search-container">
-            <input class="search" type="text">
-            <i class="search-icon"><img src="imgs/search-icon.svg" alt=""></i>
-        </div>
-        <i class="location-nav"><img src="imgs/location-icon.svg" alt="">Tokyo, Japão</i>
-    </nav>
-
+            <div class="logo">
+                <img src="imgs/Vector.svg" alt="">
+                <h2>weather</h2>
+            </div>
+            <div class="search-container">
+                <input class="search" type="text" placeholder="digite uma cidade ou país">
+                <i class="search-icon"><img src="imgs/search-icon.svg" alt=""></i>
+            </div>
+            <i class="location-nav"><img src="imgs/location-icon.svg" alt=""></i>
+        </nav>
+        
+        <div class="loading-page">
+            <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/mgmiqlge.json"
+                trigger="loop"
+                colors="primary:#3a3347,secondary:#f24c00,tertiary:#4bb3fd,quaternary:#ebe6ef"
+                state="loop"
+                style="width:250px;height:250px">
+            </lord-icon>
+    </div>
+        
     <main>
-        <div class="main-container">
-            <article class="weather-container">
-                <div class="info-card">
-                    <span class="date">08 de junho, 2022</span>
-                    <h1 class="temp">22°C</h1>
-                    <p class="desc">parcial, nublado</p>
-                    <p class="max-min">Max: <span class="max">26°</span> Min: <span class="min">18°</span></p>
-                </div>
-                <div class="icon-weater">
-                    <img class="icon-weather" src="https://openweathermap.org/img/wn/01d@4x.png" alt="">
-                </div>
-            </article>
-            <article class="flag">
-                <p>18:42 PM</p>
-                <!-- <img class="flag-country" src="https://flagsapi.com/JP/flat/64.png"> -->
-                <img src="https://flagcdn.com/w2560/jp.png" alt="">
-            </article>
-        </div>
-        <div class="second-main-container">
-            <article class="general-info-container">
-                <div class="general-info">
-                    <p class="desc-weather">O clima em Japão, Tokyo hoje</p>
-                    <h1 class="feels-like">20°C</h1>
-                    <p class="feels-like-desc">sensação térmica</p>
-                </div>
-                <div class="tables">
-                    <table class="first-table">
-                        <tr>
-                            <td><img src="imgs/Max-Min-Icon.svg" alt=""></td>
-                            <td>Max./Mín.</td>
-                            <td>26°/13°</td>
-                        </tr>
-                        <tr>
-                            <td><img src="imgs/Umidade.svg" alt=""></td>
-                            <td>umidade</td>
-                            <td>52%</td>
-                        </tr>
-                        <tr>
-                            <td><img src="imgs/Pressão.svg" alt=""></td>
-                            <td>pressão</td>
-                            <td>1002 mb</td>
-                        </tr>
-                        <tr>
-                            <td><img src="imgs/Visibilidade.svg" alt=""></td>
-                            <td>visibilidade</td>
-                            <td>9.65 km</td>
-                        </tr>
-                    </table>
-                    <table class="last-table">
-                        <tr>
-                            <td><img src="imgs/Vento.svg" alt=""></td>
-                            <td>vento</td>
-                            <td>13km/h</td>
-                        </tr>
-                        <tr>
-                            <td><img src="imgs/nascer-do-sol.svg" alt=""></td>
-                            <td>nasce do sol</td>
-                            <td>06:32h</td>
-                        </tr>
-                        <tr>
-                            <td><img src="imgs/por-do-sol.svg" alt=""></td>
-                            <td>pôr do sol</td>
-                            <td>18:21h</td>
-                        </tr>
-                        <tr>
-                            <td><img src="imgs/nuvens.svg" alt=""></td>
-                            <td>nuvens</td>
-                            <td>8%</td>
-                        </tr>
-                    </table>
-                </div>
+       
+        <div class="text-center spinner-container">
+            <div class="spinner-border" style="width: 6rem; height: 6rem;" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          
+          
+        <div class="main hidden">
 
-            </article>
+            <div class="main-container">
+                <article class="weather-container">
+                    <div class="info-card">
+                        <span class="date"></span>
+                        <h1 class="temp"></h1>
+                        <p class="desc"></p>
+                        <p class="max-min"><span class="max"></span><span class="min"></span></p>
+                    </div>
+                    <div class="icon-weater">
+                        <img class="icon-weather" alt="">
+                    </div>
+                </article>
+                <article class="flag">
+                    <p>18:42 PM</p>
+                    <img class="flag-country">
+                </article>
+            </div>
+            <div class="second-main-container">
+                <article class="general-info-container">
+                    <div class="general-info">
+                        <p class="desc-weather">O clima em Japão, Tokyo hoje</p>
+                        <h1 class="feels-like">20°C</h1>
+                        <p class="feels-like-desc">sensação térmica</p>
+                    </div>
+                    <div class="tables">
+                        <table class="first-table">
+                            <tr>
+                                <td class="icon"><img src="imgs/Max-Min-Icon.svg" alt=""></td>
+                                <td>Max./Mín.</td>
+                                <td class="max-min-td">26°/13°</td>
+                            </tr>
+                            <tr>
+                                <td class="icon"><img src="imgs/Umidade.svg" alt=""></td>
+                                <td>umidade</td>
+                                <td class="humidity-td">52%</td>
+                            </tr>
+                            <tr>
+                                <td class="icon"><img src="imgs/Pressão.svg" alt=""></td>
+                                <td>pressão</td>
+                                <td class="pressure-td">1002 mb</td>
+                            </tr>
+                            <tr class="linha">
+                                <td class="icon"><img src="imgs/visibilidade.svg" alt=""></td>
+                                <td>visibilidade</td>
+                                <td class="visibility-td">9.65 km</td>
+                            </tr>
+                        </table>
+                        <table class="last-table">
+                            <tr>
+                                <td class="icon"><img src="imgs/Vento.svg" alt=""></td>
+                                <td>vento</td>
+                                <td class="wind-td">13km/h</td>
+                            </tr>
+                            <tr>
+                                <td class="icon"><img src="imgs/nascer-do-sol.svg" alt=""></td>
+                                <td>nascer do sol</td>
+                                <td class="sunrise-td">06:32h</td>
+                            </tr>
+                            <tr>
+                                <td class="icon"><img src="imgs/por-do-sol.svg" alt=""></td>
+                                <td>pôr do sol</td>
+                                <td class="sunset-td">18:21h</td>
+                            </tr>
+                            <tr>
+                                <td class="icon"><img src="imgs/nuvens.svg" alt=""></td>
+                                <td>nuvens</td>
+                                <td class="cloud-td">8%</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </article>
+                <article class="img">
+                    <div class="img-container">
+                        <img class="unsplash" alt="">
+                    </div>
+                </article>
+            </div>
         </div>
     </main>
-    
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
